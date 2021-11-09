@@ -1,0 +1,37 @@
+@media screen and (min-width: 768px) {
+    .celek {
+        display: flex;
+    }
+}
+
+@media screen and (min-width: 960px) {
+    .celek {
+        justify-content: space-between;
+    }
+}
+
+.logo {
+    background-color: rgb(107, 202, 107);
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.menu {
+    padding: 0;
+    text-align: center;
+}
+
+.polozka {
+    list-style: none;
+    display: inline;
+}
+
+.odkaz {
+    text-decoration: none;
+    color: black;
+    padding: 20px;
+}
+
+.odkaz:hover {
+    background-color: coral;
+}
