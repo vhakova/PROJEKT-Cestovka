@@ -13,6 +13,11 @@ body {
 .container {
   margin: 20px;
 }
+@media screen and (min-width: 960px) {
+  .container {
+    margin: 20px 120px;
+  }
+}
 
 /* Top */
 .top {
@@ -71,6 +76,16 @@ body {
 .nav__a:hover, .nav__a:focus {
   background-color: #F03000;
   color: #FFFFFF;
+}
+
+.blogBody::before {
+  content: "";
+  position: absolute;
+  display: block;
+  height: 2px;
+  width: 100%;
+  background-color: #F03000;
+  margin: -40px 0px 40px 0px;
 }
 
 /* Offers */
@@ -301,4 +316,57 @@ body {
   font-weight: 400;
   font-size: 16px;
   color: #FFFFFF;
+}
+
+/* Blog */
+@media screen and (min-width: 960px) {
+  .blogBody {
+    display: grid;
+    grid-template-columns: 70% 30%;
+  }
+}
+
+.article__title--big {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 36px;
+  color: #F03000;
+  margin: 0 0 30px 0;
+}
+.article__title--small {
+  font-size: 24px;
+  font-family: "Montserrat", sans-serif;
+  color: #000000;
+  font-weight: 600;
+}
+.article__p {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #000000;
+}
+.article__img {
+  width: 100%;
+  margin: 24px 0;
+}
+
+.asideOffer {
+  display: grid;
+  grid-template-rows: 30px repeat(4, 180px);
+  gap: 20px;
+  margin-left: 20px;
+}
+.asideOffer__title--small {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  color: #000000;
+  font-size: 24px;
+}
+.asideOffer__card {
+  position: relative;
+}
+.asideOffer__text {
+  font-size: 20px;
+  margin: 0;
 }/*# sourceMappingURL=style.css.map */
