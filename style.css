@@ -29,8 +29,7 @@ body {
 @media screen and (min-width: 768px) {
   .top {
     display: flex;
-    justify-content: space-evenly;
-    margin: 40px 20px;
+    justify-content: space-between;
     align-items: center;
   }
 }
@@ -189,22 +188,28 @@ body {
   }
 }
 
+.title--small {
+  font-family: "Montserrat", sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  color: #000000;
+  margin: 40px 0 20px 0;
+}
+
 /* Services */
 .services {
-  margin: 40px 0;
   display: grid;
-  grid-template-rows: repeat(4, 25%);
+  margin: 40px 0;
   gap: 10px;
 }
 @media screen and (min-width: 768px) {
   .services {
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 @media screen and (min-width: 960px) {
   .services {
-    grid-template-columns: repeat(4, 25%);
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 .services__item {
@@ -213,12 +218,18 @@ body {
 }
 @media screen and (min-width: 768px) {
   .services__item {
-    display: block;
+    display: inline-block;
+    text-align: center;
   }
 }
 .services__img {
-  width: 40px;
-  margin: 30px;
+  height: 40px;
+  margin: 30px 0 30px 30px;
+}
+@media screen and (min-width: 768px) {
+  .services__img {
+    margin: 20px;
+  }
 }
 .services__title {
   font-family: "Montserrat", sans-serif;
@@ -227,10 +238,67 @@ body {
   font-weight: 400;
   margin: 20px 20px 10px 30px;
 }
+@media screen and (min-width: 768px) {
+  .services__title {
+    margin: 0 0 10px 0;
+  }
+}
 .services__p {
   font-family: "Open Sans", sans-serif;
   font-size: 16px;
   font-weight: 400;
   color: #000000;
   margin: 0 20px 20px 30px;
+}
+
+/* News */
+.news {
+  display: grid;
+  margin: 0;
+  gap: 20px;
+}
+@media screen and (min-width: 960px) {
+  .news {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.news__item {
+  background-color: #F0F0F0;
+}
+.news__date {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  color: #888888;
+  font-size: 16px;
+  margin: 20px 20px 10px 20px;
+}
+.news__title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  color: #F03000;
+  font-weight: 400;
+  margin: 10px 20px;
+}
+.news__p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #000000;
+  margin: 0 20px 20px 20px;
+}
+
+/* Footer */
+.footer {
+  background-color: #444444;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
+}
+.footer__p {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #FFFFFF;
 }/*# sourceMappingURL=style.css.map */
