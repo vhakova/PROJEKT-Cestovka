@@ -25,6 +25,7 @@ body {
   font-weight: 600;
   text-align: center;
   font-size: 14px;
+  position: relative;
 }
 @media screen and (min-width: 492px) {
   .top {
@@ -41,7 +42,7 @@ body {
 @media screen and (min-width: 960px) {
   .top {
     justify-content: space-between;
-    margin: 50px 20px;
+    margin: 20px 20px;
   }
 }
 
@@ -50,6 +51,8 @@ body {
 }
 @media screen and (min-width: 768px) {
   .logo {
+    position: absolute;
+    top: 20px;
     margin-bottom: 0;
   }
 }
@@ -57,11 +60,10 @@ body {
 .nav {
   padding: 0;
   text-align: center;
-  margin-bottom: 50px;
 }
 .nav__item {
   list-style: none;
-  display: inline;
+  display: inline-block;
 }
 .nav__a {
   text-decoration: none;
@@ -78,6 +80,30 @@ body {
   color: #FFFFFF;
 }
 
+.navLine {
+  margin-bottom: 90px;
+  padding: 0;
+  text-align: center;
+}
+.navLine__item {
+  list-style: none;
+  display: inline-block;
+}
+.navLine__a {
+  text-decoration: none;
+  color: #F03000;
+  padding: 10px;
+}
+@media screen and (min-width: 492px) {
+  .navLine__a {
+    padding: 20px;
+  }
+}
+.navLine__a:hover, .navLine__a:focus {
+  background-color: #F03000;
+  color: #FFFFFF;
+}
+
 .contentAside::before {
   content: "";
   position: absolute;
@@ -85,28 +111,16 @@ body {
   height: 2px;
   width: 100%;
   background-color: #F03000;
-  top: -20px;
+  top: -40px;
 }
 @media screen and (min-width: 768px) {
   .contentAside::before {
-    content: "";
-    position: absolute;
-    display: block;
-    height: 2px;
-    width: 100%;
-    background-color: #F03000;
-    top: -40px;
+    top: -60px;
   }
 }
 @media screen and (min-width: 960px) {
   .contentAside::before {
-    content: "";
-    position: absolute;
-    display: block;
-    height: 2px;
-    width: 100%;
-    background-color: #F03000;
-    top: -40px;
+    top: -50px;
   }
 }
 
@@ -116,11 +130,17 @@ body {
   grid-template-rows: 240px repeat(2, 150px);
   gap: 20px;
 }
+@media screen and (max-width: 768px) {
+  .offer {
+    margin-top: 50px;
+  }
+}
 @media screen and (min-width: 768px) {
   .offer {
     grid-template-rows: 380px 180px;
     gap: 20px;
     grid-template-columns: repeat(2, 1fr);
+    margin-top: 50px;
   }
 }
 @media screen and (min-width: 960px) {
@@ -130,8 +150,12 @@ body {
     grid-template-columns: 2fr 1fr;
   }
 }
+.offerRight {
+  margin-top: 20px;
+}
 @media screen and (min-width: 960px) {
   .offerRight {
+    margin-top: 20px;
     grid-template-rows: repeat(2, 180px);
     gap: 20px;
     grid-template-columns: 1fr 2fr;
@@ -295,7 +319,8 @@ body {
   }
 }
 .card__img {
-  height: 40px;
+  width: 40px;
+  height: 30px;
   margin: 30px 0 30px 30px;
 }
 @media screen and (min-width: 768px) {
@@ -433,6 +458,16 @@ body {
 }
 @media screen and (min-width: 960px) {
   .contentAside {
+    display: grid;
+    grid-template-columns: 70% 30%;
+  }
+}
+.contentAside--noLine {
+  margin-top: 40px;
+  position: relative;
+}
+@media screen and (min-width: 960px) {
+  .contentAside--noLine {
     display: grid;
     grid-template-columns: 70% 30%;
   }

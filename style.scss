@@ -38,6 +38,7 @@ body {
     font-weight: $w-semi-bold;
     text-align: center;
     font-size: 14px;
+    position: relative;
 
     @media screen and (min-width: 492px) {
         font-size: 18px;
@@ -51,13 +52,16 @@ body {
     
     @media screen and (min-width: 960px) {
         justify-content: space-between;
-        margin: 50px 20px;
+        margin: 20px 20px;
     }
 }
 
 .logo {
     margin-bottom: 30px;
+
     @media screen and (min-width: 768px) {
+        position: absolute;
+        top: 20px;
         margin-bottom: 0;
     }
 }
@@ -65,11 +69,39 @@ body {
 .nav {
     padding: 0;
     text-align: center;
-    margin-bottom: 50px;
 
     &__item {
         list-style: none;
-        display: inline;
+        display: inline-block;
+
+    }
+
+    &__a {
+        text-decoration: none;
+        color: $c-primary;
+        padding: 10px;
+
+        @media screen and (min-width: 492px) {
+            padding: 20px;
+        }
+    
+        &:hover,
+        &:focus {
+            background-color: $c-primary;
+            color: $c-secondary;
+        }
+    }
+}
+
+.navLine {
+    margin-bottom: 90px;
+    padding: 0;
+    text-align: center;
+
+    &__item {
+        list-style: none;
+        display: inline-block;
+
     }
 
     &__a {
@@ -97,27 +129,14 @@ body {
     height: 2px;
     width: 100%;
     background-color: $c-primary;
-    top: -20px;
+    top: -40px;
 
     @media screen and (min-width: 768px) {
-        content: "";
-        position: absolute;
-        display: block;
-        height: 2px;
-        width: 100%;
-        background-color: $c-primary;
-        top: -40px;
-
+        top: -60px;
     }
 
     @media screen and (min-width: 960px) {
-        content: "";
-        position: absolute;
-        display: block;
-        height: 2px;
-        width: 100%;
-        background-color: $c-primary;
-        top: -40px;
+        top: -50px;
     }
 
 }
@@ -129,10 +148,15 @@ body {
     grid-template-rows: 240px repeat(2,150px);
     gap: 20px;
 
+    @media screen and (max-width: 768px) {
+        margin-top: 50px;
+    }
+
     @media screen and (min-width: 768px) {
         grid-template-rows: 380px 180px;
         gap: 20px ;
         grid-template-columns: repeat(2, 1fr);
+        margin-top: 50px;
     }
 
     &Left {
@@ -145,7 +169,10 @@ body {
     }
 
     &Right {
+        margin-top: 20px;
+       
         @media screen and (min-width: 960px) {
+            margin-top: 20px;
             grid-template-rows: repeat(2,180px);
             gap: 20px ;
             grid-template-columns: 1fr 2fr;
@@ -316,7 +343,8 @@ body {
     }
 
     &__img {
-        height: 40px;
+        width: 40px;
+        height: 30px;
         margin: 30px 0 30px 30px;
 
         @media screen and (min-width: 768px) {
@@ -469,7 +497,17 @@ body {
         display: grid;
         grid-template-columns: 70% 30%;
     }
+
+    &--noLine {
+        margin-top: 40px;
+        position: relative;
+        @media screen and (min-width: 960px) {
+            display: grid;
+            grid-template-columns: 70% 30%;
+        }
+    }
 }
+
 
 .article {
 
