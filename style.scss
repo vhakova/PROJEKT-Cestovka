@@ -413,7 +413,11 @@ body {
     display: grid;
     grid-template-rows: 30px repeat(3,180px);
     gap: 20px;
-    margin-left: 20px;
+    margin: 40px 0;
+
+    @media screen and (min-width: 960px) {
+        margin: 0 0 0 20px;
+        }
 
     &__title--small {
         margin: 0;
@@ -425,10 +429,27 @@ body {
         @media screen and (max-width: 960px) {
             grid-column: 1 / -1;
             }
+
+        @media screen and (min-width: 960px) and (max-width: 1200px) {
+            font-size: 20px;
+            }
     }
 
     &__card {
         position: relative;
+
+        &--hidden {
+            display: none;
+            
+            @media screen and (min-width: 768px) and (max-width: 960px) {
+                display: block;
+                font-family: $f-secondary;
+                font-size: 16px;
+                color: $c-secondary;
+                font-weight: $w-regular;
+                margin: 0;
+                }  
+        }
 
         &--first {
             position: relative;
@@ -441,9 +462,19 @@ body {
     &__text {
         font-size: 20px;
         margin: 0;
+
+        &--bigger {
+            font-size: 20px;
+            margin: 0;
+
+            @media screen and (min-width: 768px) and (max-width: 960px) {
+            font-size: 28px;
+            }
+        }
     }
 
-    @media screen and (max-width: 960px) {
+
+    @media screen and (min-width: 768px) and (max-width: 960px) {
         margin-left: 0;
         grid-template-rows: 30px 380px 180px;
         grid-template-columns: repeat(2, 1fr);
