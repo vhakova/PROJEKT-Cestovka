@@ -223,37 +223,37 @@ body {
 }
 
 .one {
-  background-image: url("images/palmy@2x.png");
+  background-image: url("Images/palmy@2x.png");
   background-size: cover;
   background-position: center;
 }
 
 .two {
-  background-image: url("images/jezero2@2x.png");
+  background-image: url("Images/jezero2@2x.png");
   background-size: cover;
   background-position: center;
 }
 
 .three {
-  background-image: url("images/nakole@2x.png");
+  background-image: url("Images/nakole@2x.png");
   background-size: cover;
   background-position: center;
 }
 
 .four {
-  background-image: url("images/lodicka@2x.png");
+  background-image: url("Images/lodicka@2x.png");
   background-size: cover;
   background-position: center;
 }
 
 .five {
-  background-image: url("images/podkova@2x.png");
+  background-image: url("Images/podkova@2x.png");
   background-size: cover;
   background-position: center;
 }
 
 .six {
-  background-image: url("images/zatoka@2x.png");
+  background-image: url("Images/zatoka@2x.png");
   background-size: cover;
   background-position: center;
 }
